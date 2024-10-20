@@ -44,7 +44,7 @@
 ##### Return-Home method implemented to loop user back to home or exit application in case of invalid input
 
 ### Custom Search 
-![CustomSearch](Images/CustomSearch.png) ![CustomSearchOutput](Images/CustomSearchOutput.png)
+![CustomSearch](Images/CustomSearchNew.png) ![CustomSearchOutput](Images/CustomSearchOutput.png)
 ##### IF method used to filter user input 
 ##### Determines type of search according to input 
 ##### Finds transactions that best matches input by utilizing array and split functions nested in while loop 
