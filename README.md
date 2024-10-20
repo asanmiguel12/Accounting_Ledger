@@ -35,7 +35,7 @@
 ##### Sorts deposits and payments by current month 
 ##### Utilizes Thread.sleep function to control UI pacing and make user experience more comprehensive
 ##### Return-Home method implemented to loop user back to home or exit application in case of invalid input
-![MTDReportsCode](Images/Screenshot 2024-10-16 at 9.19.49 AM.png)
+![MTDReportsCode](Images/Screenshot%202024-10-16%20at%209.19.49%E2%80%AFAM.png)
 
 ### Year To Date Ledger Report
 ##### Similar method to mtd report 
