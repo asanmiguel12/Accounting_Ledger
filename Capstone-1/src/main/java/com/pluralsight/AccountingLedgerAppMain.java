@@ -54,7 +54,6 @@ public class AccountingLedgerAppMain {
 
     public void ledgerMenu() throws InterruptedException {
         Thread.sleep(1000);
-        getUser();
         System.out.println("\n~LEDGER MENU~");
         System.out.println("What would you like to do with your ledger today? Please enter command for desired option:\n\n" +
                 "A) All - Display all entries\n" +
@@ -243,7 +242,7 @@ public class AccountingLedgerAppMain {
             String input = bufReader.readLine();
             while ((input = bufReader.readLine()) != null) {
                 String[] arrTransactions = input.split("\\|");
-                UserLedger f = new UserLedger(arrTransactions[0], arrTransactions[1], arrTransactions[2], arrTransactions[3], Double. parseDouble(arrTransactions[4]));
+                UserLedger f = new UserLedger(arrTransactions[0], arrTransactions[1], arrTransactions[2], arrTransactions[3], Double.parseDouble(arrTransactions[4]));
                 while (f.getAmountChanged() < 0) {
                     System.out.println(f.date + "|" + f.time + "|" + f.itemDescription + "|" + f.vendor + "|" + f.amountChanged);
                     break;
@@ -258,7 +257,7 @@ public class AccountingLedgerAppMain {
         }
     }
 
-    public void reportsMenu() {
+    public void reportsMenu() throws InterruptedException {
         try {
             Thread.sleep(500);
             System.out.println("\n~LEDGER REPORTS~");
@@ -484,7 +483,7 @@ public class AccountingLedgerAppMain {
         }
     }
 
-    public void customSearch() {
+    public void customSearch() throws InterruptedException {
     try {
         Thread.sleep(500);
         System.out.println("\n~CUSTOM SEARCH~");
@@ -544,7 +543,7 @@ public class AccountingLedgerAppMain {
     returnHomeprompt();
 }
 
-    public void returnHomeprompt() {
+    public void returnHomeprompt() throws InterruptedException {
         System.out.println("\nWould you like to do something else with your ledger today?\n" +
                 "Y) Yes\n" +
                 "N) No\n\n" +
@@ -552,7 +551,7 @@ public class AccountingLedgerAppMain {
         String menuChoice = scanner.nextLine();
 
         if (menuChoice.equalsIgnoreCase("Y")) {
-            homeScreen();
+            ledgerMenu();
         } else {
             exit();
         }
